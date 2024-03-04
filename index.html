@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="stylesheet" href="mystyle.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Feliz Dia dos Namorados</title>
+
+</head>
+<body>
+  <div class="painel">
+    <h1> Feliz dia do sim </h1>
+    <img src="https://media1.tenor.com/m/rv20dFusX-QAAAAC/love.gif" alt="">
+    <h2>  Aceita casar comigo?  </h2>
+
+    <button id="sim" onclick="simm()"> Sim!</button>
+    <button onmouseover="fuja()" id="nao"> Não!</button>
+
+    
+
+
+  </div>
+  <script>
+    function fuja(){
+        const botaoNao = document.getElementById("nao")
+
+        const larguraJanela = window.innerWidth;
+        const alturaJanela = window.innerHeight;
+
+        const larguraMaxima = larguraJanela - botaoNao.offsetWidth;
+        const alturaMaxima = alturaJanela - botaoNao.offsetHeight;
+
+        const aleatorioLargura = Math.floor(Math.random() * larguraMaxima);
+        const aleatorioAltura = Math.floor(Math.random() * alturaMaxima);
+
+        botaoNao.style.left = aleatorioLargura + "px";
+        botaoNao.style.top = aleatorioAltura + "px";
+
+    }
+
+    function simm(){
+      alert("Eu te amo mais que ontem e menos que amanhã.");
+    }
+</script>
+</body>
+</html>
